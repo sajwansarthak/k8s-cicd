@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: k8s-cicd-demo
+  namespace: argocd
+spec:
+  project: default
+  source:
+    # Replace with your own GitHub repo URL
+    repoURL: https://github.com/sajwansarthak/k8s-cicd-demo.git
+    targetRevision: main
+    path: k8s
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true      # delete resources that were removed from Git
+      selfHeal: true   # revert manual changes made with kubectl
+    syncOptions:
+      - CreateNamespace=true
