@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     # Replace with your own GitHub repo URL
-    repoURL: https://github.com/sajwansarthak/k8s-cicd-demo.git
+    repoURL: https://github.com/sajwansarthak/k8s-cicd.git
     targetRevision: main
     path: k8s
   destination:

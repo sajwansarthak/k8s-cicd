@@ -8,7 +8,7 @@ const tasks = [];
 
 app.get('/', (req, res) => {
   res.json({
-    message: 'Hello from the CI/CD pipeline!',
+    message: 'Hello from version 2',
     version: process.env.APP_VERSION || 'dev',
     pod: os.hostname()
   });
