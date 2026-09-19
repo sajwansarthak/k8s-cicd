@@ -17,7 +17,7 @@ spec:
       containers:
         - name: k8s-cicd-demo
           # The CI pipeline rewrites this line with the new commit SHA on every push
-          image: sajwansarthak/k8s-cicd-demo:2008673256a689a350f7345e9aef2cf8923b20ad
+          image: sajwansarthak/k8s-cicd-demo:eabb7d87852e97ac6cd107546d66ba756da2f72f
           ports:
             - containerPort: 3000
           readinessProbe:
